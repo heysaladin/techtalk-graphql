@@ -9,6 +9,12 @@
 
 #-------------------------------
 
+# CLIENT Dependency directories
+/module-2-mutation-KOKE/client/node_modules
+
+# SERVER Dependency directories
+/module-2-mutation-KOKE/server/node_modules
+
 # Logs
 /module-2-mutation-KOKE/logs
 /module-2-mutation-KOKE/*.log
