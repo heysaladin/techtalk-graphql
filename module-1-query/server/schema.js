@@ -72,7 +72,7 @@ const PersonType = new GraphQLObjectType({
       resolve: (person) => person.last_name,
     },
     email: {
-      type: GraphQLInt
+      type: GraphQLString
     },
     username: {
       type: GraphQLString
@@ -108,41 +108,6 @@ const QueryType = new GraphQLObjectType({
   }),
 });
 
-var MutationType = new GraphQLObjectType({
-  name: 'PeopleMutations',
-  description: 'These are the things we can change',
-  fields: () => ({
-    createPerson: {
-      type: PersonType,
-      description: 'Create a new person',
-      args: {
-        id:          { type: GraphQLString },
-        username:        { type: new GraphQLNonNull(GraphQLString) },
-        email:       { type: new GraphQLNonNull(GraphQLString) },
-        firstName:        { type: GraphQLString },
-        lastName:        { type: GraphQLString },
-        friends: { type: new GraphQLList(GraphQLString) }
-      },
-      resolve: (value, { person }) => {
-        return PersonType.createPerson(person);
-      }
-    }
-  }),
-});
-
-// const PersonInputType = new GraphQLInputObjectType({
-//   name: 'PersonInput',
-//   fields: () => ({
-//     id:          { type: GraphQLString },
-//     usename:        { type: new GraphQLNonNull(GraphQLString) },
-//     email:       { type: new GraphQLNonNull(GraphQLString) },
-//     firstName:        { type: GraphQLString },
-//     lastName:        { type: GraphQLString },
-//     friends: { type: new GraphQLList(GraphQLString) }
-//   })
-// });
-
 export default new GraphQLSchema({
-  query: QueryType,
-  mutation: MutationType
+  query: QueryType
 });

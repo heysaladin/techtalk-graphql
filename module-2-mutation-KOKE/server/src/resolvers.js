@@ -46,24 +46,6 @@ export const resolvers = {
       people.push(newPerson);
       return newPerson;
     },
-  updatePerson: (root, args) => {
-      const updatedPerson = { id: args.id };
-      people.pop(updatedPerson);
-      const updatedNewPerson = { id: args.id, messages: [], name: args.name, picture: args.picture };
-      people.push(updatedNewPerson);
-      return updatedNewPerson;
-    },
-  deletePerson: (root, args) => {
-    // for(var i = people.length - 1; i >= 0; i--) {
-      const destroyPerson = { id: args.id };
-      people.pop(destroyPerson);
-      // if(people.includes(destroyPerson)){
-        // console.log(destroyPerson);
-      // people.splice(index,1, destroyPerson);
-      // }
-      return destroyPerson;
-    // }
-    },
   addMessage: (root, { message }) => {
     const person = people.find(person => person.id === message.personId);
     if(!person)
@@ -73,5 +55,20 @@ export const resolvers = {
     return newMessage;
   },
 },
+
+
+// updatePerson: (root, args) => {
+//   const updatedPerson = { id: args.id };
+//   people.pop(updatedPerson);
+//   const updatedNewPerson = { id: args.id, messages: [], name: args.name, picture: args.picture };
+//   people.push(updatedNewPerson);
+//   return updatedNewPerson;
+// },
+// deletePerson: (root, args) => {
+//   const destroyPerson = { id: args.id };
+//   people.pop(destroyPerson);
+//   return destroyPerson;
+// },
+
 
 };

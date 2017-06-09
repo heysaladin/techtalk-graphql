@@ -15,24 +15,19 @@ class AddPerson extends React.Component {
     this.handleChangePicture = this.handleChangePicture.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
-  //  const 
    handleChangeName = (event) => {
     this.setState({valueName: event.target.value});
-    // console.log(this.state.valueName);
   }
    handleChangePicture = (event) => {
     this.setState({valuePicture: event.target.value});
-  //  console.log(this.state.valuePicture);
   }
-  // const 
-//  const 
  handleSubmit = (evt, valueName, valuePicture) => {
+  evt.preventDefault();
    const {mutate} = this.props;
    valueName = this.state.valueName;
    valuePicture = this.state.valuePicture;
    console.log(this.state.valueName);
    console.log(this.state.valuePicture);
-    // if (evt.keyCode === 13) {
    mutate({
         variables: { name: valueName, picture: valuePicture },
         optimisticResponse: {
@@ -52,10 +47,9 @@ class AddPerson extends React.Component {
             store.writeQuery({ query: peopleListQuery, data });
           },
       });
-      // evt.target.valueName = '';
-      // evt.target.valuePicture = '';
-      this.setState({valueName: '', valuePicture: ''});
-    // }
+      evt.target.valueName = '';
+      evt.target.valuePicture = '';
+      // this.setState({valueName: '', valuePicture: ''});
   };
 
 render(){

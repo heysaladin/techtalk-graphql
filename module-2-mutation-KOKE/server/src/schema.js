@@ -34,8 +34,8 @@ input MessageInput{
 type Mutation {
   # A mutation to add a new person to the list of people
   addPerson(name: String!, picture: String!): Person
-  updatePerson(id: String!, name: String!, picture: String!): Person
-  deletePerson(id: String!): Person
+  #updatePerson(id: String!, name: String!, picture: String!): Person
+  #deletePerson(id: String!): Person
   addMessage(message: MessageInput!): Message
 }
 
