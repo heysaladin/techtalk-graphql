@@ -22,3 +22,33 @@ npm start
 
 SERVER berjalan di ````http://localhost:5000/````
 GraphiQL dapat diakses di ````http://localhost:5000/graphiql````
+
+untuk mencobanya silakan masukkan query berikut:
+~~~~
+query{
+  allPeople{
+    username
+    email
+    firstName
+    lastName
+    friends{
+      username
+      email
+    }
+}
+~~~~
+
+atau untuk menampilkan spesifik data silakan masukkan query berikut:
+~~~~
+query{
+  person(id:"1"){
+    username
+    email
+    firstName
+    lastName
+    friends{
+      username
+      email
+    }
+}
+~~~~
