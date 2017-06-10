@@ -1,7 +1,7 @@
 Untuk mencobanya ada perlu menginstall [Nodejs](https://nodejs.org/en/)
 
 ### API
-buka terminal CLI
+buka terminal CLI dan ketikkan perintah berikut:
 ~~~~
 cd api
 npm install
@@ -14,6 +14,7 @@ untuk menampilkan semua data orang: ````http://localhost:8000/people````
 untuk menampilkan spesifik data orang: ````http://localhost:8000/people/1````,````http://localhost:8000/people/2````,````http://localhost:8000/people/3````,````http://localhost:8000/people/4````
 
 ### SERVER
+buka terminal CLI dan ketikkan perintah berikut:
 ~~~~
 cd server
 npm install
