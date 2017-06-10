@@ -61,6 +61,9 @@ render(){
 				padding: 10,
 				display: 'flex',
 				alignItems: 'center',
+        paddingBottom: 20,
+        marginBottom: 20,
+        borderBottom: 'solid 1px rgba(255,255,255,0.5)'
 				
 			},
 			input: {
@@ -73,9 +76,9 @@ render(){
 				border: 'solid 1px #ddd'
 			},
 			button: {
-				flexGrow: 1,
+				flexGrow: 2,
 				float: 'right',
-				width: 100,
+				width: 200,
 				padding: 8,
 				borderRadius: 25,
 				border: 'solid 1px #00d2d0',
@@ -90,6 +93,7 @@ render(){
     <div style={styles.container}>
     {/*// <form onSubmit={this.handleSubmit}>*/}
     <input
+      style={styles.input}
       type="text"
       name="valueName"
       placeholder="New person Name"
@@ -97,6 +101,7 @@ render(){
       value={this.state.valueName}
     />
     <input
+      style={styles.input}
       type="text"
       name="valuePicture"
       placeholder="New person Picture URL"
