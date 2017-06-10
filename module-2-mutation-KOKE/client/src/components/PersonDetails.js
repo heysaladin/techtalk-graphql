@@ -18,11 +18,11 @@ const PersonDetails = ({ data: {loading, error, person }, match }) => {
   if(person === null){
     return <NotFound />
   }
-  return (<div>
+  return (<div className="container">
       <div className="personName">
         {person.name}
       </div>
-      <img style={{width: 300}} src={person.picture} alt={person.name} />
+      <img style={{width: 300,borderRadius:10,margin:'0 auto',display:'block'}} src={person.picture} alt={person.name} />
       <MessageList messages={person.messages}/>
     </div>);
 }

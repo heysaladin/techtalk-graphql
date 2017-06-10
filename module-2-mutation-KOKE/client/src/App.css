@@ -151,13 +151,15 @@ div.person span {
 div.personName {
   width: 200px;
   background-color: transparent;
-  padding: 10px 50px 10px 30px;
+  /*padding: 10px 50px 10px 30px;*/
+  padding: 10px 30px 10px 30px;
   outline: none;
   border: none;
   color: #fff;
   font-size: 32px;
   text-align: center;
   color: #22A699;
+  margin: 0 auto;
 }
 
 div.messagesList {
