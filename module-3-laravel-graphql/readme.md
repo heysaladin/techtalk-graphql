@@ -41,6 +41,21 @@ $ composer install
 ```
 
 **3-** Create file  `.env` and  setting database in `.env`
+~~~~
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laragraphql
+DB_USERNAME=root
+DB_PASSWORD=
+~~~~
+
+noted:
+1. ready MySQL RDBMS
+1. ready database call 'laragraphql' (you can execute the SQL file in this directory)
+1. MySQL username 'root'
+1. MySQL password ''
+
  
 **4-** Run artisan migrate and seeder
 
