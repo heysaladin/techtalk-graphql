@@ -1,4 +1,4 @@
-Untuk mencobanya ada perlu menginstall [Nodejs](https://nodejs.org/en/)
+Untuk mencobanya ada perlu menginstall [Nodejs](https://nodejs.org/en/) terlebih dahulu. Jika sudah silakan dilanjutkan!
 
 ### SERVER
 buka terminal CLI dan ketikkan perintah berikut:
