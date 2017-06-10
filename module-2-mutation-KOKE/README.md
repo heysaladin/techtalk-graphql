@@ -1,3 +1,28 @@
+Untuk mencobanya ada perlu menginstall [Nodejs](https://nodejs.org/en/)
+
+### SERVER
+buka terminal CLI dan ketikkan perintah berikut:
+~~~~
+cd server
+npm install
+npm start
+~~~~
+
+SERVER berjalan di ````http://localhost:4000/````
+GraphiQL dapat diakses di ````http://localhost:4000/graphiql````
+
+### CLIENT
+buka terminal CLI dan ketikkan perintah berikut:
+~~~~
+cd client
+npm install
+npm start
+~~~~
+
+CLIENT berjalan di ````http://localhost:3000/````
+
+---------------------------
+
 # graphql-tutorial / Hermes
 Full-stack GraphQL tutorials with React, Redux and Apollo
 
